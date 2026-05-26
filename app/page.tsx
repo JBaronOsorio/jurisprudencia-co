@@ -24,11 +24,21 @@ interface SearchResult {
 }
 
 const EXAMPLE_QUERIES = [
-  'Despido de mujer embarazada',
-  'Negación de tratamiento médico por EPS',
-  'Derecho a la educación de niños con discapacidad',
-  'Tutela contra banco por deuda',
+  'Me negaron un medicamento por la EPS',
+  'Despido durante embarazo',
+  'Mi hijo con discapacidad no puede entrar al colegio',
+  'Me cortaron el servicio de agua sin aviso',
 ]
+
+function getSimilarityBadgeClass(similarity: number): string {
+  if (similarity >= 80) {
+    return 'bg-green-100 text-green-800 dark:bg-green-500/20 dark:text-green-300'
+  }
+  if (similarity >= 60) {
+    return 'bg-yellow-100 text-yellow-800 dark:bg-yellow-500/20 dark:text-yellow-300'
+  }
+  return 'bg-gray-100 text-gray-700 dark:bg-gray-500/20 dark:text-gray-300'
+}
 
 export default function Home() {
   const [query, setQuery] = useState('')
@@ -76,12 +86,16 @@ export default function Home() {
       <div className="max-w-4xl mx-auto px-4 py-12">
         {/* Hero */}
         <div className="text-center mb-10">
-          <h1 className="text-4xl font-bold tracking-tight mb-3">
-            Buscá jurisprudencia de la<br />
-            <span className="text-primary">Corte Constitucional</span>
+          <h1 className="text-5xl font-bold tracking-tight mb-3">
+            Tus derechos,{' '}
+            <span className="text-primary">en palabras simples</span>
           </h1>
           <p className="text-muted-foreground text-lg max-w-xl mx-auto">
             Describí tu situación en lenguaje natural y encontrá sentencias relevantes con extractos y citas.
+          </p>
+          <p className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-primary">
+            <Scale className="h-4 w-4" />
+            Más de 300 sentencias indexadas
           </p>
         </div>
 
@@ -176,7 +190,12 @@ export default function Home() {
                         <div className="flex items-start justify-between gap-2 mb-2">
                           <div className="flex items-center gap-2 flex-wrap">
                             <span className="font-semibold text-primary">{source.numero}</span>
-                            <Badge variant="secondary">{source.similarity}% relevante</Badge>
+                            <Badge
+                              variant="secondary"
+                              className={getSimilarityBadgeClass(source.similarity)}
+                            >
+                              {source.similarity}% relevante
+                            </Badge>
                             {source.tema && (
                               <Badge variant="outline">{source.tema}</Badge>
                             )}

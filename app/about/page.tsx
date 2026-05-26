@@ -1,4 +1,4 @@
-import { Scale, Database, Code, AlertTriangle } from 'lucide-react'
+import { Scale, Database, Code, AlertTriangle, Users } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 
 export default function About() {
@@ -83,6 +83,23 @@ export default function About() {
                 Ver código en GitHub →
               </a>
             </p>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2 text-base">
+              <Users className="h-4 w-4" />
+              Equipo
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="text-sm text-muted-foreground">
+            <ul className="space-y-1">
+              <li className="text-foreground font-medium">Juan Barón Osorio</li>
+              <li className="text-foreground font-medium">Tomás Osorio Zambrano</li>
+              <li className="text-foreground font-medium">Felipe Ochoa Londoño</li>
+            </ul>
+            <p className="mt-3">Universidad EAFIT · Mayo 2026</p>
           </CardContent>
         </Card>
       </div>
