@@ -6,6 +6,16 @@ Buscador semántico de sentencias de la Corte Constitucional colombiana. El usua
 
 ---
 
+## Problema y usuario
+
+Esta herramienta está pensada para el **ciudadano de a pie**: una persona sin formación jurídica que de repente se topa con un problema concreto y necesita saber qué dice la Corte Constitucional al respecto. No es para abogados ni para investigadores académicos; es para alguien que escribe "me negaron un medicamento" o "me echaron del trabajo estando embarazada" y necesita una respuesta clara.
+
+El momento de uso es típicamente reactivo y urgente: a la EPS le negaron una autorización, el colegio no recibe al hijo con discapacidad, le cortaron un servicio público sin aviso, lo despidieron en una situación protegida. En ese instante la persona no sabe si lo que le pasó vulnera un derecho fundamental, no conoce los números de las sentencias relevantes y no tiene tiempo —ni plata— para pagar una consulta con un abogado antes de decidir si vale la pena tutelar.
+
+Hoy esto no está resuelto porque las herramientas oficiales (la Relatoría de la Corte Constitucional y los buscadores de las altas cortes) están diseñadas para el gremio jurídico: exigen conocer el número de sentencia (T-760/08, SU-, C-), el magistrado ponente o la jerga técnica del derecho. Buscar "embarazo despido" en el portal oficial devuelve resultados desordenados y crudos, sin extractos relevantes ni explicación. Acá la consulta es en lenguaje natural y la respuesta viene con cita verificable y enlace a la sentencia original.
+
+---
+
 ## Stack
 
 | Capa | Tecnología |
