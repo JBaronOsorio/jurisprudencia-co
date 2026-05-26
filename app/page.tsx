@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Link from 'next/link'
 import { Search, Scale, ExternalLink, AlertCircle } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Textarea } from '@/components/ui/textarea'
@@ -77,9 +78,9 @@ export default function Home() {
             <Scale className="h-6 w-6 text-primary" />
             <span className="font-semibold text-lg">Jurisprudencia CO</span>
           </div>
-          <a href="/about" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+          <Link href="/about" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
             Acerca de
-          </a>
+          </Link>
         </div>
       </header>
 

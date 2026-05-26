@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { Scale, Database, Code, AlertTriangle, Users } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 
@@ -8,9 +9,9 @@ export default function About() {
         <div className="max-w-4xl mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <Scale className="h-6 w-6 text-primary" />
-            <a href="/" className="font-semibold text-lg hover:text-primary transition-colors">
+            <Link href="/" className="font-semibold text-lg hover:text-primary transition-colors">
               Jurisprudencia CO
-            </a>
+            </Link>
           </div>
         </div>
       </header>
